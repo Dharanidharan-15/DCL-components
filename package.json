@@ -1,0 +1,40 @@
+{
+    "name": "DCL/components",
+    "version": "0.0.1",
+    "description": "An example component library for npm packages",
+    "homepage": "https://your-homepage-url.com",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/your-username/your-repository.git"
+    },
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    },
+    "keywords": [
+        "react",
+        "react-component",
+        "typescript"
+    ],
+    "author": "dharanidharan_dd",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^22.1.0",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "prettier": "^3.3.3",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "typescript": "^5.5.4"
+    },
+    "peerDependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    }
+}
